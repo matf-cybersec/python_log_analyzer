@@ -24,7 +24,6 @@ Analyze local authentication and system log files to identify failed logins, cou
 - No database
 - No web interface
 - Designed to run locally with `python main.py logfile.log`
-- The walkthrough PDF should stay local and is ignored by git
 
 ## Next Steps
 
