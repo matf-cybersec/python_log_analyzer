@@ -108,17 +108,6 @@ Suspicious IPs:
 - 192.168.1.50: 3 failed attempts
 ```
 
-## Git Ignore and Local-only Files
-
-This repository intentionally keeps generated artifacts local-only.
-The file `docs/walkthrough.pdf` is excluded from version control so personal notes and local exports are not pushed to GitHub.
-
-The current `.gitignore` entries for this project include:
-- `/docs/walkthrough.pdf`
-- `/data/outputs/`
-
-If you add additional local files or exported reports, include them in `.gitignore` before committing.
-
 ## Next Steps
 
 1. JSON export for downstream analysis
