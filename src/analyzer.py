@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from src.parser import LogEvent
 
 
-@dataclass(slots=True)
+@dataclass
 class AnalysisResult:
     total_events: int
     successful_logins: int

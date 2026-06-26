@@ -30,13 +30,13 @@ Analyze local authentication and system log files to identify failed logins, cou
 ### Run the analyzer on a log file
 
 ```bash
-python main.py data/samples/auth_sample.log
+python3 main.py data/samples/auth_sample.log
 ```
 
 ### Run with a custom suspicious IP threshold (default is 3 failed attempts)
 
 ```bash
-python main.py data/samples/auth_sample.log --threshold 5
+python3 main.py data/samples/auth_sample.log --threshold 5
 ```
 
 ### Run the test suite
@@ -81,7 +81,7 @@ print(f'{passed}/{len(tests)} tests passed')
 ### Supported log event types
 
 - **Failed SSH login (bad password)**: detects password authentication failures
-- **Failed SSH login (invalid user)**: detects login attempts against non-existent accounts  
+- **Failed SSH login (invalid user)**: detects login attempts against non-existent accounts
 - **Successful SSH login**: counts successful password-based logins
 - **Permission denied**: detects SSH permission errors
 - **Connection refused**: detects refused authentication attempts
@@ -90,12 +90,14 @@ print(f'{passed}/{len(tests)} tests passed')
 ### Output
 
 The analyzer prints a summary showing:
+
 - Total parsed events
 - Successful logins
 - Failed logins
 - Suspicious IPs (IPs with failed logins exceeding the threshold)
 
 Example output:
+
 ```
 Log Analysis Summary
 --------------------
@@ -105,6 +107,17 @@ Failed logins: 5
 Suspicious IPs:
 - 192.168.1.50: 3 failed attempts
 ```
+
+## Git Ignore and Local-only Files
+
+This repository intentionally keeps generated artifacts local-only.
+The file `docs/walkthrough.pdf` is excluded from version control so personal notes and local exports are not pushed to GitHub.
+
+The current `.gitignore` entries for this project include:
+- `/docs/walkthrough.pdf`
+- `/data/outputs/`
+
+If you add additional local files or exported reports, include them in `.gitignore` before committing.
 
 ## Next Steps
 

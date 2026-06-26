@@ -200,6 +200,7 @@ cython_debug/
 #   that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
 
 # Project-specific generated files
+# Keep the local walkthrough PDF out of version control because it is a private export.
 /docs/walkthrough.pdf
 /data/outputs/
 #   and can be added to the global gitignore or merged into this file. However, if you prefer,

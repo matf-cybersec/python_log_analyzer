@@ -37,7 +37,7 @@ SUDO_RE = re.compile(
 )
 
 
-@dataclass(slots=True)
+@dataclass
 class LogEvent:
     timestamp: str
     host: str
